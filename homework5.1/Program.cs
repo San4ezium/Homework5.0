@@ -1,16 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-long firstNumber = 0; 
-long secondNumber = 0; ;
-
-Console.WriteLine("enter two numbers : ");
-firstNumber = Convert.ToInt64(Console.ReadLine());
-secondNumber = Convert.ToInt64(Console.ReadLine());
 
 try
 {
-    if (secondNumber == 0)
-        throw new DivideByZeroException("Division by zero");
-    else Console.WriteLine (firstNumber / secondNumber);
+    Console.WriteLine("enter two numbers : ");
+    long firstNumber = Convert.ToInt64(Console.ReadLine());
+    long secondNumber = Convert.ToInt64(Console.ReadLine());
+    {
+        if (secondNumber == 0)
+            Console.WriteLine("Error: division by zero.");
+            var result = firstNumber / secondNumber;
+        Console.WriteLine($"Result division: {result} ");
+    }
 }
 catch (DivideByZeroException)
 {

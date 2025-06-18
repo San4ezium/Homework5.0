@@ -1,12 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Enter numbers:");
+
+Console.Write("Enter numbers: ");
 string input = Console.ReadLine();
 
-if (int.TryParse(input, out int number))
+try
 {
+    int number = Convert.ToInt32(input);
     Console.WriteLine($"You entered a number: {number}");
 }
-else
-{ 
+catch (FormatException)
+{
     Console.WriteLine("Error: The entered value is not a number.");
 }
