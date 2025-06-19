@@ -2,15 +2,13 @@
 
 try
 {
-    Console.WriteLine("enter two numbers : ");
-    long firstNumber = Convert.ToInt64(Console.ReadLine());
-    long secondNumber = Convert.ToInt64(Console.ReadLine());
-    {
-        if (secondNumber == 0)
-            Console.WriteLine("Error: division by zero.");
-            var result = firstNumber / secondNumber;
-        Console.WriteLine($"Result division: {result} ");
-    }
+    Console.Write("Enter first number: ");
+    int firstNumber = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter second number: ");
+    int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+    int result = firstNumber / secondNumber; 
+    Console.WriteLine($"Result division: {result} ");
 }
 catch (DivideByZeroException)
 {
